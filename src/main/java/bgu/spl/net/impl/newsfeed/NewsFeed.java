@@ -20,6 +20,7 @@ public class NewsFeed {
     public void publish(String channel, String news) {
         ConcurrentLinkedQueue<String> queue = channels.computeIfAbsent(channel, k -> new ConcurrentLinkedQueue<>());
         queue.add(news);
+        System.out.println("noam");
     }
 
     public void clear() {
